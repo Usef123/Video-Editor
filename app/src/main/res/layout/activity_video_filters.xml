@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="med.umerfarooq.com.videoeditor.VideoFeatures.VideoTrimmer">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:titleMarginStart="85dp"
+        android:titleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+<FrameLayout
+    android:id="@+id/videoframe"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/black"
+    android:layout_below="@+id/my_toolbar"
+    android:layout_centerHorizontal="true">
+
+
+    <VideoView
+        android:id="@+id/VideoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+
+        android:layout_marginTop="5dp" />
+</FrameLayout>
+    <FrameLayout
+        android:id="@+id/adView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+    </FrameLayout>
+
+    <CheckBox
+        android:id="@+id/mute_check_box"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Mute" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:progress="0" />
+    <ListView
+        android:layout_below="@+id/videoframe"
+        android:id="@+id/video_list"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:text="cancel" />
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_above="@id/adView"
+
+        android:layout_marginBottom="56dp"
+
+
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/adda"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:elevation="18dp"
+
+            android:text="Add"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/button"
+            android:layout_above="@+id/adView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+
+            android:background="@color/buttoncolor"
+            android:elevation="18dp"
+            android:text="Skip"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+        />
+    </LinearLayout>
+
+</RelativeLayout>

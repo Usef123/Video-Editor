@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context="med.umerfarooq.com.videoeditor.VideoFeatures.VideoTrimmer">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:titleMarginStart="85dp"
+        android:titleTextColor="#ffffff"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@color/black"
+        android:layout_below="@id/my_toolbar"
+    >
+
+        <VideoView
+            android:id="@+id/VideoVieww"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+        android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tvTextToAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drag Your Text from here"
+            android:layout_centerInParent="true"
+android:textSize="10sp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/command"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/root"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/buttoncolor"
+
+        android:hint="Type text here"
+        android:text="Type Your Text from here" />
+
+
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/command"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Text Size:"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/neg"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/command"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/textView2"
+        android:background="@drawable/neg"/>
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/command"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/neg"
+        android:background="@drawable/pos"/>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="Border"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adView"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="56dp"
+
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/run_command"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+
+            android:background="@color/colorAccent"
+            android:elevation="18dp"
+            android:text="Add"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_above="@+id/adView"
+            android:layout_weight="1"
+
+            android:background="@color/buttoncolor"
+            android:elevation="18dp"
+            android:text="Skip"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/adView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        >
+
+    </FrameLayout>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:layout_alignStart="@+id/size"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:visibility="gone" />
+</RelativeLayout>
